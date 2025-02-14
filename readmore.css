@@ -1,0 +1,79 @@
+.readmore-container .readmore {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.readmore-container .readmore .readme-img {
+  margin-top: 40px;
+  height: 400px;
+  width: 400px;
+  position: relative;
+  display: flex;
+  background-color: transparent;
+  background-color: #0f9db6;
+}
+.readmore-container .readmore .readme-img img {
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 564px;
+  top: -164px;
+}
+.readmore-container .readmore .readmore-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.readmore-container .readmore .readmore-content h1 {
+  color: #0f9db6;
+  font-size: 60px;
+  font-family: "Inter";
+}
+.readmore-container .readmore .readmore-content h2 {
+  font-size: 40px;
+}
+.readmore-container .readmore .readmore-content button {
+  width: 200px;
+}
+
+@media only screen and (max-width: 720px) {
+  .readmore-container .readmore {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .readmore-container .readmore .readme-img {
+    margin-top: 40px;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    background-color: #0f9db6;
+  }
+  .readmore-container .readmore .readme-img img {
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 364px;
+    top: -64px;
+  }
+  .readmore-container .readmore .readmore-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .readmore-container .readmore .readmore-content h1 {
+    color: #0f9db6;
+    font-size: 60px;
+    font-family: "Inter";
+  }
+  .readmore-container .readmore .readmore-content h2 {
+    font-size: 40px;
+  }
+  .readmore-container .readmore .readmore-content P {
+    text-align: justify;
+  }
+  .readmore-container .readmore .readmore-content button {
+    width: 200px;
+  }
+}/*# sourceMappingURL=readmore.css.map */

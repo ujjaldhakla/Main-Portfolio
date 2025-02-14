@@ -1,0 +1,102 @@
+// 
+.readmore-container{
+    .readmore{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .readme-img{
+            margin-top: 40px;
+            height: 400px;
+            width: 400px;
+//             border-left:3px solid $highlight-color ;
+
+// border-bottom:3px solid $highlight-color ;
+// overflow-y: hidden;
+// border-radius: 50%;
+position: relative;
+display: flex;
+// z-index: 10;
+background-color: transparent;
+background-color: $highlight-color;
+img{
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 564px;
+    top: -164px;
+// border-radius: 50%;
+        }
+        }
+        
+        .readmore-content{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1{
+color: $highlight-color;
+font-size: 60px;
+font-family:$headingfont ;
+            }
+            h2{
+font-size: 40px;
+            }
+            P{
+
+            }
+            button{
+width: 200px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:720px){
+    .readmore-container{
+        .readmore{
+            display: grid;
+            grid-template-columns: 1fr ;
+            gap: 30px;
+            .readme-img{
+                margin-top: 40px;
+                height: 300px;
+                width: 100%;
+    //             border-left:3px solid $highlight-color ;
+    
+    // border-bottom:3px solid $highlight-color ;
+    // overflow-y: hidden;
+    // border-radius: 50%;
+    position: relative;
+    display: flex;
+    // z-index: 10;
+    background-color: transparent;
+    background-color: $highlight-color;
+    img{
+        position: absolute;
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: 364px;
+        top: -64px;
+    // border-radius: 50%;
+            }
+            }
+            
+            .readmore-content{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h1{
+    color: $highlight-color;
+    font-size: 60px;
+    font-family:$headingfont ;
+                }
+                h2{
+    font-size: 40px;
+                }
+                P{
+    text-align: justify;
+                }
+                button{
+    width: 200px;
+                }
+            }
+        }
+    }
+}

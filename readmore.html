@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter&display=swap" rel="stylesheet">
+    <title>About Ujjal</title>
+    <link rel="stylesheet" href="readmore.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<script src="https://kit.fontawesome.com/73c74f1e46.js" crossorigin="anonymous"></script>
+<body>
+  
+  <header>
+    <nav class="navbar">
+
+      <div class="container">
+        <a href="index.html#home" class="logo">
+          <span class="logo-initials">UD</span>
+        </a>
+        
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#home" class="active">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skill">Skills</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+      </div>
+      <!-- </div> -->
+</nav>
+  </header>
+     <div class="readmore-container">
+      <div class="container">
+        <div class="readmore">
+          <div class="readme-img"><img src="portfolio-img.png" alt="ujjal img">
+          </div>
+          
+          <div class="readmore-content">
+            <h1>"</h1>
+            <h2>About Me</h2>
+            <p>A developer with a keen interest in creating innovative applications and systems.
+              Your projects span a range of technologies, including online car rental systems,
+              expense trackers, and social media apps.
+              You have hands-on experience building front-end interfaces
+              for e-commerce websites and are exploring backend integration,
+              API development, and database management.
+              Your technical skills include HTML, CSS, JavaScript, Node.js, MySQL,
+              and Android app development using web technologies.
+              I'm also focused on creating a professional portfolio website
+              and converting web projects into mobile apps.</p>
+              <a href="ujjal-cv.pdf" download class="btn"><button>Download CV</button></a>
+                
+          </div>
+        </div>
+      </div>
+     </div>
+     <footer>
+      <p>
+        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> Ujjal. Made with love.
+      </p>
+     </footer>
+     <script src="script.js"></script>
+     <script> 
+     const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+      const navLinksItems = document.querySelectorAll('.nav-links a');
+ 
+      burger.addEventListener('click', () => {
+          // Toggle Burger Animation
+          burger.classList.toggle('activee');
+          // Toggle Menu Visibility
+          navLinks.classList.toggle('activee');
+      });
+      navLinksItems.forEach(link => {
+       link.addEventListener('click', () => {
+           burger.classList.remove('activee'); // Remove active class from burger
+           navLinks.classList.remove('activee'); // Remove active class from menu
+       });
+   });
+      // Close menu when clicking outside
+      document.addEventListener('click', (event) => {
+          if (!event.target.closest('.navbar') && navLinks.classList.contains('activee')) {
+              burger.classList.remove('activee');
+              navLinks.classList.remove('activee');
+          }
+      });
+      </script>
+</body>
+</html>
