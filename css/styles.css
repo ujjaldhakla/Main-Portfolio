@@ -131,8 +131,6 @@ body ul {
   list-style: none;
 }
 
-/* CSS */
-/* Add more as needed */
 .container {
   margin: 0 100px;
   padding-top: 80px;
@@ -545,7 +543,7 @@ header nav .container .burger.activee .line:nth-child(3) {
   opacity: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to top, rgba(163, 87, 68, 0.8823529412), rgba(254, 180, 123, 0.1529411765));
+  background: linear-gradient(to top, rgba(163, 87, 68, 0.8823529412), rgba(204, 182, 165, 0.1529411765));
   /* Use rgba for transparency */
   top: 0;
   border-top-left-radius: 10px;
@@ -557,9 +555,14 @@ header nav .container .burger.activee .line:nth-child(3) {
   transition: transform 0.8s;
 }
 .project-container .project .project-image .project-overlay p {
-  font-size: 20px;
+  font-size: 25px;
+  color: var(--text-secondary);
+}
+.project-container .project .project-image .project-overlay p a {
   color: var(--text-primary);
-  font-weight: 600;
+}
+.project-container .project .project-image .project-overlay p a:hover {
+  color: var(--text-secondary);
 }
 .project-container .project .project-content {
   padding-top: 30px;

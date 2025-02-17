@@ -186,29 +186,7 @@ textarea {
 body ul {
   list-style: none;
 }
-/* CSS */
-// .animate-on-scroll {
-//   opacity: 0;
-//   transform: scale(0.95);
-//   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  
-//   /* Optional - Add delay between elements */
-//   transition-delay: calc(var(--index) * 0.5s);
-// }
 
-// .animate-on-scroll.active {
-//   opacity: 1;
-//   transform: scale(1);
-// }
-// .animate-on-scroll:nth-child(1) { transition-delay: 0.5s; }
-// .animate-on-scroll:nth-child(2) { transition-delay: 0.9s; }
-// .animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
-// .animate-on-scroll:nth-child(4) { transition-delay: 0.4s; }
-// .animate-on-scroll:nth-child(5) { transition-delay: 0.5s; }
-// .animate-on-scroll:nth-child(6) { transition-delay: 0.6s; }
-// .animate-on-scroll:nth-child(7) { transition-delay: 0.7s; }
-// .animate-on-scroll:nth-child(8) { transition-delay: 0.8s; }
-/* Add more as needed */
 .container {
   margin: 0 100px;
   padding-top: 80px;
@@ -351,8 +329,6 @@ header {
   }
 }
 //media for bootstrap
-
-
 
 //hpme
 .home-container {
@@ -667,9 +643,6 @@ button{
     }
   }
 }
-
-
-
 //projects
 
 .project-container{
@@ -716,7 +689,7 @@ object-fit:cover;
       opacity: 0;
       height: 100%;
       width: 100%;
-      background: linear-gradient(to top, #a35744e1, #feb47b27);
+      background: linear-gradient(to top, #a35744e1, #ccb6a527);
       ; /* Use rgba for transparency */
       top: 0;
       border-top-left-radius: 10px;
@@ -728,9 +701,16 @@ object-fit:cover;
       transition: transform 0.8s;
       
 p{
-  font-size: 20px;
-  color:var(--text-primary);
-  font-weight: 600;
+  font-size: 25px;
+  color:var(--text-secondary);
+  
+  a{
+    color:var(--text-primary);
+    
+    &:hover{
+      color:var(--text-secondary);
+    }
+  }
 }
     }
    
