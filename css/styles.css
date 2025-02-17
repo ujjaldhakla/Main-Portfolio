@@ -1,27 +1,36 @@
 :root {
-  --primary-bg: #eaeaea;
-  --secondary-bg: #e9e4e4;
-  --text-primary: #232222;
-  --text-secondary: #333333;
-  --accent-color: #bb86fc;
-  --highlight-color: #00d9ffcf;
-  --button-bg: #cee6e692;
-  --button-hover-bg: #f2eeee;
-  --border-color: #9c9898;
-  --error-color: #cf6679;
+  /* Base Colors */
+  --primary-bg: #edecec; /* Warm white (unchanged, works well with golden-orange) */
+  --secondary-bg: #e0e0e0; /* Soft warm beige (lighter and warmer to complement the highlight) */
+  /* Text */
+  --text-primary: #140909; /* Deep chocolate (unchanged, provides good contrast) */
+  --text-secondary: #1b150ee4; /* Muted brick (unchanged, works well with warm tones) */
+  /* Accents */
+  --accent-color: #D7932C; /* New highlight color: golden-orange */
+  --highlight-color: #d7932c; /* Your new highlight color */
+  /* Buttons */
+  --button-bg: #e9d9ca; /* Light warm orange (derived from highlight color) */
+  --button-hover-bg: #f7cb9f; /* Darker warm orange (hover state) */
+  --button-text: #2B1A1A; /* Deep chocolate for contrast (unchanged) */
+  /* Borders & Details */
+  --border-color: #D4B08C; /* Warm orange-brown (complements the highlight) */
+  /* Feedback */
+  --error-color: #9B1C1C; /* Dark error red (unchanged, for consistency) */
+  --success-color: #34823D; /* Forest green (unchanged, for consistency) */
+  --warning-color: #C57C1D; /* Warm amber (unchanged, works well with golden-orange) */ /* Amber */
 }
 
 .dark-mode {
-  --primary-bg: #131516;
-  --secondary-bg: #0f0f0f;
-  --text-primary: #e0e0e0;
-  --text-secondary: #f7f7f7;
-  --accent-color: #bb86fc;
-  --highlight-color: #0f9db6;
-  --button-bg: #2e333e;
-  --button-hover-bg: #333333;
-  --border-color: #323232;
-  --error-color: #cf6679;
+  --primary-bg: #161616;
+  --secondary-bg: #1e1e1e;
+  --text-primary: #eaeaea;
+  --text-secondary: #b8b8b8;
+  --accent-color: #703636;
+  --highlight-color: #d7932c;
+  --button-bg: #2a2a2a;
+  --button-hover-bg: #3a3a3a;
+  --border-color: #5a5a5a;
+  --error-color: #ff4c4c;
 }
 
 * {
@@ -122,6 +131,8 @@ body ul {
   list-style: none;
 }
 
+/* CSS */
+/* Add more as needed */
 .container {
   margin: 0 100px;
   padding-top: 80px;
@@ -244,8 +255,12 @@ header nav .container .burger.activee .line:nth-child(3) {
 .home-container button {
   background-color: var(--primary-bg);
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 11px;
   width: 11px;
+  box-shadow: 1px 1px 7px rgba(146, 145, 145, 0.573);
 }
 .home-container button:hover {
   background-color: var(--primary-bg);
@@ -261,7 +276,7 @@ header nav .container .burger.activee .line:nth-child(3) {
   justify-content: space-between;
   padding-top: 80px;
 }
-.home-container .home .home-right .person-name p {
+.home-container .home .home-right .person-name h1 {
   font-size: 50px;
   font-family: "Inter";
   font-weight: 800;
@@ -439,7 +454,7 @@ header nav .container .burger.activee .line:nth-child(3) {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 2px solid var(--highlight-color);
+  border: 0px solid var(--highlight-color);
   width: 250px;
   gap: 20px;
   padding: 20px;
@@ -449,8 +464,8 @@ header nav .container .burger.activee .line:nth-child(3) {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .skill-container .skill .skills-category .skills-container .skill-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(74, 171, 198, 0.2);
+  transform: scale(1.04);
+  box-shadow: 0 8px 16px rgba(61, 58, 27, 0.27);
 }
 .skill-container .skill .skills-category .skills-container .skill-card img {
   height: 45px;
@@ -530,7 +545,8 @@ header nav .container .burger.activee .line:nth-child(3) {
   opacity: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(55, 117, 162, 0.8352941176); /* Use rgba for transparency */
+  background: linear-gradient(to top, rgba(163, 87, 68, 0.8823529412), rgba(254, 180, 123, 0.1529411765));
+  /* Use rgba for transparency */
   top: 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -543,7 +559,7 @@ header nav .container .burger.activee .line:nth-child(3) {
 .project-container .project .project-image .project-overlay p {
   font-size: 20px;
   color: var(--text-primary);
-  font-weight: 500;
+  font-weight: 600;
 }
 .project-container .project .project-content {
   padding-top: 30px;
@@ -671,7 +687,7 @@ footer {
   .home-container .home .home-right {
     padding-top: 30px;
   }
-  .home-container .home .home-right .person-name p {
+  .home-container .home .home-right .person-name h1 {
     font-size: 40px;
   }
   .home-container .home .home-right .changing-text {
@@ -841,7 +857,7 @@ footer {
   .home-container .home .home-right {
     padding-top: 30px;
   }
-  .home-container .home .home-right .person-name p {
+  .home-container .home .home-right .person-name h1 {
     font-size: 30px;
   }
   .home-container .home .home-right .changing-text {
@@ -864,7 +880,7 @@ footer {
   .home-container .home-img .home-image-wrapper {
     height: 400px;
     width: 400px;
-    background-color: rgba(42, 215, 230, 0.341);
+    background-color: var(--highlight-color);
     box-shadow: 0 4px 6px rgba(167, 230, 223, 0.292);
   }
   .home-container .home-img .home-img-name {
@@ -1042,7 +1058,7 @@ footer {
   .home-container .home .home-right {
     padding-top: 30px;
   }
-  .home-container .home .home-right .person-name p {
+  .home-container .home .home-right .person-name h1 {
     font-size: 30px;
     font-weight: 400;
   }
@@ -1109,7 +1125,6 @@ footer {
   }
   .skill-container .skill .skills-category .skills-container .skill-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(74, 171, 198, 0.2);
   }
   .skill-container .skill .skills-category .skills-container .skill-card img {
     height: 34px;

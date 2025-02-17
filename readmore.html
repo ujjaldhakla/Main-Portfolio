@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter&display=swap" rel="stylesheet">
-    <title>About Ujjal</title>
+    <title>About</title>
     <link rel="stylesheet" href="css/readmore.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animation.css">
     
 </head>
 
@@ -18,11 +19,17 @@
 
       <div class="container">
         <a href="index.html#home" class="logo">
-          <span class="logo-initials">UD</span>
-        </a>
+         
+           
+          <div class="surface"> 
+            <div class="logo-icon">UD</div>
+        </div>
+          <div class="logo-text"><p>UJJAL</p> <span>DHAKAL</span></div>
+          
+      </a>
         
         <ul class="nav-links" id="nav-links">
-          <li><a href="index.html#home" class="active">Home</a></li>
+          <li><a href="index.html#home" >Home</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#skill">Skills</a></li>
           <li><a href="index.html#projects">Projects</a></li>
@@ -37,16 +44,16 @@
       <!-- </div> -->
 </nav>
   </header>
-     <div class="readmore-container">
+     <div class="readmore-container scroll-content">
       <div class="container">
-        <div class="readmore">
-          <div class="readme-img"><img src="images/portfolio-img.png" alt="ujjal img">
+        <div class="readmore ">
+          <div class="readme-img scroll-content"><img src="images/portfolio-img.png" alt="ujjal img">
           </div>
           
           <div class="readmore-content">
-            <h1>"</h1>
-            <h2>About Me</h2>
-            <p>A developer with a keen interest in creating innovative applications and systems.
+            <i class="fa-solid fa-quote-left"></i>
+            <h2 class="scroll-content">About Me</h2>
+            <p class="scroll-content">A developer with a keen interest in creating innovative applications and systems.
               Your projects span a range of technologies, including online car rental systems,
               expense trackers, and social media apps.
               You have hands-on experience building front-end interfaces
@@ -56,19 +63,19 @@
               and Android app development using web technologies.
               I'm also focused on creating a professional portfolio website
               and converting web projects into mobile apps.</p>
-              <a href="ujjal-cv.pdf" download class="btn"><button>Download CV</button></a>
+              <a href="texts-files/ujjal-cv.pdf" download class="btn"><button>Download CV</button></a>
                 
           </div>
         </div>
       </div>
      </div>
      <footer>
-      <p>
+      <p class="scroll-content">
         Copyright <i class="fa fa-copyright" aria-hidden="true"></i> Ujjal. Made with love.
       </p>
      </footer>
-     <script src="script.js"></script>
-     <script> 
+     <!-- <script src="js/script.js"></script> -->
+      <script> 
      const burger = document.querySelector('.burger');
       const navLinks = document.querySelector('.nav-links');
       const navLinksItems = document.querySelectorAll('.nav-links a');
@@ -92,6 +99,20 @@
               navLinks.classList.remove('activee');
           }
       });
-      </script>
-</body>
+      </script> 
+     <script>   const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+    
+    document.querySelectorAll(".scroll-content").forEach(element => {
+      observer.observe(element);
+    });</script>
+</body> 
+
 </html>

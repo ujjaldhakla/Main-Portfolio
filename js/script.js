@@ -1,7 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
+console.log("script.js is loaded!");
 const sentences = [
     "Welcome to my portfolio!",
     "I am a developer!",
-    "I love coding and building projects.",
+    
     
   ];
 
@@ -31,22 +33,9 @@ const sentences = [
       setTimeout(typeSentence, typingSpeed);
     }
   }
-
-  // Start the typing animation
   typeSentence();
+});
 
-//   // Select all navigation links
-// const navLinks = document.querySelectorAll('ul li a');
-
-// // Add a click event listener to each link
-// navLinks.forEach(link => {
-//   link.addEventListener('click', function () {
-//     // Remove "active" class from all links
-//     navLinks.forEach(nav => nav.classList.remove('active'));
-//     // Add "active" class to the clicked link
-//     this.classList.add('active');
-//   });
-// });
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('nav a');
   const sections = document.querySelectorAll('section');
@@ -61,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       }
   });
-
   // Update active class on scroll
   window.addEventListener('scroll', () => {
       let current = '';
@@ -89,6 +77,47 @@ document.addEventListener('DOMContentLoaded', () => {
       // Handle form submission
    
 
+      
+      //nav bar
+      document.addEventListener("DOMContentLoaded", function() {
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+        
+       //  const readMoreListItem = document.createElement('li');
+   
+       //  // Create a new anchor tag
+       //  const readMoreLink = document.createElement('a');
+       //  readMoreLink.setAttribute('href', 'readmore.html'); // Set the link target
+       //  readMoreLink.textContent = 'Read More'; // Set the link text
+       //  readMoreLink.classList.add('read-more'); // Add a class for styling (optional)
+        
+       //  // Append the anchor to the list item
+       //  readMoreListItem.appendChild(readMoreLink);
+        
+       //  // Append the list item to the navigation menu
+       //  navLinks.appendChild(readMoreListItem);
+   
+        burger.addEventListener('click', () => {
+            // Toggle Burger Animation
+            burger.classList.toggle('activee');
+            // Toggle Menu Visibility
+            navLinks.classList.toggle('activee');
+        });
+        navLinksItems.forEach(link => {
+         link.addEventListener('click', () => {
+             burger.classList.remove('activee'); // Remove active class from burger
+             navLinks.classList.remove('activee'); // Remove active class from menu
+         });
+     });
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.navbar') && navLinks.classList.contains('activee')) {
+                burger.classList.remove('activee');
+                navLinks.classList.remove('activee');
+            }
+        });
+       });
 
       document.addEventListener("DOMContentLoaded", function() {
         const form = document.getElementById('contactForm');
@@ -152,72 +181,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      //nav bar
-      document.addEventListener("DOMContentLoaded", function() {
-     const burger = document.querySelector('.burger');
-     const navLinks = document.querySelector('.nav-links');
-     const navLinksItems = document.querySelectorAll('.nav-links a');
-     
-    //  const readMoreListItem = document.createElement('li');
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get theme toggle container and body
+        const toggleContainer = document.getElementById('toggleContainer');
+        const body = document.body;
 
-    //  // Create a new anchor tag
-    //  const readMoreLink = document.createElement('a');
-    //  readMoreLink.setAttribute('href', 'readmore.html'); // Set the link target
-    //  readMoreLink.textContent = 'Read More'; // Set the link text
-    //  readMoreLink.classList.add('read-more'); // Add a class for styling (optional)
-     
-    //  // Append the anchor to the list item
-    //  readMoreListItem.appendChild(readMoreLink);
-     
-    //  // Append the list item to the navigation menu
-    //  navLinks.appendChild(readMoreListItem);
+        // Toggle dark mode class
+        function toggleTheme() {
+            body.classList.toggle('dark-mode');
+            toggleContainer.classList.toggle('dark-mode');
 
-     burger.addEventListener('click', () => {
-         // Toggle Burger Animation
-         burger.classList.toggle('activee');
-         // Toggle Menu Visibility
-         navLinks.classList.toggle('activee');
-     });
-     navLinksItems.forEach(link => {
-      link.addEventListener('click', () => {
-          burger.classList.remove('activee'); // Remove active class from burger
-          navLinks.classList.remove('activee'); // Remove active class from menu
-      });
-  });
-     // Close menu when clicking outside
-     document.addEventListener('click', (event) => {
-         if (!event.target.closest('.navbar') && navLinks.classList.contains('activee')) {
-             burger.classList.remove('activee');
-             navLinks.classList.remove('activee');
-         }
-     });
+            // Save preference to localStorage
+            const isDarkMode = body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        }
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            toggleContainer.classList.add('dark-mode');
+        }
+
+        // Attach click handler
+        toggleContainer.addEventListener('click', toggleTheme);
     });
-
-// Get theme toggle button
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Toggle dark mode class
-function toggleTheme() {
-  body.classList.toggle('dark-mode');
-
-  // Save preference to localStorage
-  const isDarkMode = body.classList.contains('dark-mode');
-  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-
-  // Update button text
-  themeToggle.textContent = isDarkMode ? '🌞' : '🌚';
-}
-
-// Initialize theme
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-  body.classList.add('dark-mode');
-  themeToggle.textContent = '🌞';
-}
-
-// Attach click handler
-themeToggle.addEventListener('click', toggleTheme);
-        
+//animation visible and not
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    }, { threshold: 0.2 });
     
+    document.querySelectorAll(".scroll-content").forEach(element => {
+      observer.observe(element);
+    });
     
+
+   

@@ -7,10 +7,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animation.css">
   <title>Ujjal Dhakal</title>
+  <link rel="Icon" href="image/">
   <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <!-- <script type="text/javascript">
    (function(){
       emailjs.init("d2viB5vq_NqFug7GE");
@@ -23,12 +27,19 @@
 <body>
  
   <header>
-    <nav class="navbar">
+    <nav class="navbar ">
 
       <div class="container">
         <a href="#home" class="logo">
-          <span class="logo-initials">UD</span>
+         
+           
+            <div class="surface"> 
+              <div class="logo-icon">UD</div>
+          </div>
+            <div class="logo-text"><p>UJJAL</p> <span>DHAKAL</span></div>
+            
         </a>
+        
         
         <ul class="nav-links" id="nav-links">
           <li><a href="#home" class="active">Home</a></li>
@@ -48,17 +59,24 @@
 </nav>
   </header>
 
-  <section class="home-container" id="home">
+  <section class="home-container scroll-content" id="home">
     
     <div class="container">
-      <button id="theme-toggle">🌞</button>
+      <div class="toggle-container scroll-content" id="toggleContainer">
+        <div class="clouds"></div>
+        <div class="stars"></div>
+        <div class="toggle-button">
+            <span class="sun">🌤️</span>
+            <span class="moon">🌛</span>
+        </div>
+    </div>
       <div class="home">
-        <div class="home-right">
+        <div class="home-right scroll-content">
           <div class="right-content">
             <div class="person-name">
-              <p>
+              <h1>
                 Hi, I'm Ujjal Dhakal
-              </p>
+              </h1>
             </div>
             <div class="changing-text">
               <p id="typing"> Front End Developer</p>
@@ -73,19 +91,19 @@
 
         </div>
 
-        <div class="home-img">
+        <div class="home-img  scroll-content">
           <div class="home-image-wrapper">
             <img src="images/portfolio-img.png" alt="">
             <!-- <div class="name-animate"> -->
-            <div class="home-img-name">
+            <!-- <div class="home-img-name">
               <h1>Ujjal Dhakal</h1>
               <p>Web Developer</p>
-            </div>
+            </div> -->
             <!-- </div> -->
           </div>
         </div>
       </div>
-      <div class="social-logio">
+      <div class="social-logio ">
         <a href="https://github.com/ujjaldhakla"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
@@ -95,14 +113,14 @@
     </div>
   </section>
 
-  <section class="about-container"  id="about" >
+  <section class="about-container scroll-content "  id="about" >
     <div class="container" >
-      <div class="about">
+      <div class="about ">
         <h1>About <span>Me</span></h1>
-        <div class="about-img">
-        <img  src="images/portfolio-img.png" alt=""></div>
-        <h2>Frontend Developer!</h2>
-        <p>A developer with a keen interest in creating innovative applications and systems.
+        <div class="about-img ">
+        <img class="scroll-content" src="images/portfolio-img.png" alt=""></div>
+        <h2 >Frontend Developer!</h2>
+          <p class="scroll-content">A developer with a keen interest in creating innovative applications and systems.
           Your projects span a range of technologies, including online car rental systems,
           expense trackers, and social media apps.
           You have hands-on experience building front-end interfaces
@@ -112,22 +130,23 @@
           and Android app development using web technologies.
           I'm also focused on creating a professional portfolio website
           and converting web projects into mobile apps. </p>
-          <a href="readmore.html"><button type="submit">Read More</button></a>
+      
+          <a href="readmore.html"><button class="scroll-content" type="submit">Read More</button></a>
           
       </div>
      
     </div>
   </section>
 
-  <section class="skill-container" id="skill">
+  <section class="skill-container scroll-content" id="skill">
     <div class="container" >
-      <div class="skill">
-        <h1>My <span>Skills</span></h1>
+      <div class="skill ">
+        <h1 class="scroll-content">My <span>Skills</span></h1>
         <div class="skills-category">
-          <h3 class="category-title">Programming Languages</h3>
-          <div class="skills-container">
+          <!-- <h3 class="category-title">Programming Languages</h3> -->
+          <div class="skills-container scroll-content">
 
-            <div class="skill-card">
+            <div class="skill-card scroll-content">
               <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript Icon">
               <h3>JavaScript</h3>
               <p>Experience with ES6+, DOM manipulation, and frameworks.</p>
@@ -135,7 +154,7 @@
                 <div class="skill-bar" style="width: 90%;"></div>
               </div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card scroll-content">
               <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python Icon">
               <h3>Python</h3>
               <p>Proficient in data analysis, scripting, and automation.</p>
@@ -143,7 +162,7 @@
                 <div class="skill-bar" style="width: 50%;"></div>
               </div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card scroll-content">
               <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++ Icon">
               <h3>C++</h3>
               <p>Skilled in object-oriented programming and algorithms.</p>
@@ -154,9 +173,9 @@
           </div>
         </div>
         <div class="skills-category">
-          <h3 class="category-title">Front-End Development</h3>
-          <div class="skills-container">
-            <div class="skill-card">
+          <!-- <h3 class="category-title">Front-End Development</h3> -->
+          <div class="skills-container  scroll-content">
+            <div class="skill-card scroll-content">
               <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React Icon">
               <h3>React</h3>
               <p>Building modern UI/UX with React and hooks.</p>
@@ -164,7 +183,7 @@
                 <div class="skill-bar" style="width: 75%;"></div>
               </div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card scroll-content">
               <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML Icon">
               <h3>HTML</h3>
               <p>Creating semantic and accessible web structures.</p>
@@ -172,7 +191,7 @@
                 <div class="skill-bar" style="width: 95%;"></div>
               </div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card scroll-content">
               <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS Icon">
               <h3>CSS</h3>
               <p>Styling with modern CSS and responsive designs.</p>
@@ -186,53 +205,52 @@
     </div>
   </section>
   <!-- project sectionn -->
-   <section class="project-container" id="projects">
+   <section class="project-container animate-on-scroll" id="projects">
     <div class="container">
-      <h1>My <span>Projects</span></h1>
+      <h1 class="scroll-content">My <span>Projects</span></h1>
       <div class="projects">
-<div class="project">
+<div class="project scroll-content">
   <div class="project-image">
     <img src="images/ecommerce.jpg" alt="">
-    <div class="project-overlay"><p><a href="https://github.com/ujjaldhakla/E-commerce">View Projects</a></p></div>
+    <div class="project-overlay"><p><a href="https://github.dev/ujjaldhakla/E-commerce">View Projects</a></p></div>
   </div>
   <div class="project-content">
-    <h2>Web Application</h2>
+    <h2>Ecommerce website</h2>
     <p>Developed a robust web application 
       using modern technologies and best practices.</p>
-      <h4>HTML, CSS, JS, MySQL</h4>
+      <h4>HTML, CSS, JS, MySQL,Node js</h4>
   </div>
 </div>
-<div class="project">
+<div class="project scroll-content">
   <div class="project-image">
     <img src="images/emizen_tech_food_deliver_img1.png" alt="">
-    <div class="project-overlay"><p><a href="https://github.com/ujjaldhakla/Car-rental-system">View Project</a></p></div>
+    <div class="project-overlay"><p><a href="https://github.dev/ujjaldhakla/Car-rental-system">View Project</a></p></div>
   </div>
   <div class="project-content">
     <h2>Web Application</h2>
-    <p>Developed a robust web application 
+    <p>Developed a resturant web application 
       using modern technologies and best practices.</p>
       <h4>HTML, CSS, JS, MySQL</h4>
   </div>
 </div>
-<div class="project">
+<div class="project scroll-content">
   <div class="project-image">
     <img src="images/maxresdefault.jpg" alt="">
-    <div class="project-overlay"><p><a href="https://github.com/ujjaldhakla/ujjal-calculator">View Project</a></p></div>
+    <div class="project-overlay"><p><a href="https://github.dev/ujjaldhakla/ujjal-calculator">View Project</a></p></div>
   </div>
   <div class="project-content">
-    <h2>Web Application</h2>
-    <p>Developed a robust web application 
-      using modern technologies and best practices.</p>
-      <h4>HTML, CSS, JS, MySQL</h4>
+    <h2>Calculator App</h2>
+    <p>simple calcularor app for simple caculation.</p>
+      <h4>Flutter, Dart</h4>
   </div>
 </div>
       </div>
     </div>
    </section>
     <!-- contact -->
-     <section class="contact-container" id="contact">
+     <section class="contact-container animate-on-scroll" id="contact">
       <div class="container">
-      <h1>
+      <h1 class="scroll-content">
         Contact <span>Me</span>
       </h1>
       
@@ -240,11 +258,11 @@
        <div class="contact-side">
         <div class="my-contact">
          
-          <p><i class="fa-solid fa-location-dot"></i> <span>Kathmandu, Nepal</span></p>
-          <p><i class="fa-solid fa-phone"></i><span>9842263072</span> </p>
-          <p><i class="fa-regular fa-envelope"></i> <span>udhakal610@gmail.com</span></p>
+          <p class="scroll-content"><i class="fa-solid fa-location-dot"></i> <span>Kathmandu, Nepal</span></p>
+          <p class="scroll-content"><i class="fa-solid fa-phone"></i><span>9842263072</span> </p>
+          <p class="scroll-content"><i class="fa-regular fa-envelope"></i> <span>udhakal610@gmail.com</span></p>
         
-          <div class="conatact-social-logo">
+          <div class="conatact-social-logo scroll-content">
             <a href="https://github.com/ujjaldhakla"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
@@ -252,7 +270,7 @@
             <a href="https://www.facebook.com/profile.php?id=100052983202036"><i class="fa-brands fa-facebook"></i></a>
           </div>
         </div>
-        <div class="send-message">
+        <div class="send-message scroll-content">
           <form id="contactForm">
             <p>Write some message:</p>
             <input type="text" id="name" name="name" placeholder="Enter your Name" required>
@@ -269,9 +287,9 @@
       </div>
      </div>
      </section>
-     <footer>
+     <footer class="scroll-content">
       <p>
-        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> Ujjal. Made with love.
+        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> Ujjal Dhakal. Made with love ❤️.
       </p>
      </footer>
      <script type="text/javascript">

@@ -7,16 +7,12 @@
             margin-top: 40px;
             height: 400px;
             width: 400px;
-//             border-left:3px solid $highlight-color ;
 
-// border-bottom:3px solid $highlight-color ;
-// overflow-y: hidden;
-// border-radius: 50%;
 position: relative;
 display: flex;
 // z-index: 10;
-background-color: transparent;
-background-color: $highlight-color;
+// background-color: transparent;
+background-color: var(--highlight-color);
 img{
     position: absolute;
     -o-object-fit: cover;
@@ -31,11 +27,14 @@ img{
             display: flex;
             flex-direction: column;
             gap: 20px;
-            h1{
-color: $highlight-color;
-font-size: 60px;
-font-family:$headingfont ;
-            }
+            
+                 i{
+                    font-size: 60px;
+                    color: var(--highlight-color);
+
+}
+
+           
             h2{
 font-size: 40px;
             }
@@ -67,7 +66,7 @@ width: 200px;
     display: flex;
     // z-index: 10;
     background-color: transparent;
-    background-color: $highlight-color;
+    background-color:var(--highlight-color);
     img{
         position: absolute;
         -o-object-fit: cover;
@@ -83,7 +82,7 @@ width: 200px;
                 flex-direction: column;
                 gap: 20px;
                 h1{
-    color: $highlight-color;
+    color: var(--highlight-color);
     font-size: 60px;
     font-family:$headingfont ;
                 }

@@ -1,29 +1,44 @@
 // Light Mode (default)
 :root {
-  --primary-bg: #eaeaea;
-  --secondary-bg: #e9e4e4;
-  --text-primary: #232222;
-  --text-secondary: #333333;
-  --accent-color: #bb86fc;
-  --highlight-color: #00d9ffcf;
-  --button-bg: #cee6e692;
-  --button-hover-bg: #f2eeee;
-  --border-color: #9c9898;
-  --error-color: #cf6679;
-}
+  
+/* Base Colors */
+--primary-bg: #edecec;          /* Warm white (unchanged, works well with golden-orange) */
+--secondary-bg: #e0e0e0;       /* Soft warm beige (lighter and warmer to complement the highlight) */
 
+/* Text */
+--text-primary: #140909;       /* Deep chocolate (unchanged, provides good contrast) */
+--text-secondary: #1b150ee4;     /* Muted brick (unchanged, works well with warm tones) */
+
+/* Accents */
+--accent-color: #D7932C;       /* New highlight color: golden-orange */
+--highlight-color: #d7932c;    /* Your new highlight color */
+
+/* Buttons */
+--button-bg: #e9d9ca;          /* Light warm orange (derived from highlight color) */
+--button-hover-bg: #f7cb9f;    /* Darker warm orange (hover state) */
+--button-text: #2B1A1A;        /* Deep chocolate for contrast (unchanged) */
+
+/* Borders & Details */
+--border-color: #D4B08C;       /* Warm orange-brown (complements the highlight) */
+
+/* Feedback */
+--error-color: #9B1C1C;        /* Dark error red (unchanged, for consistency) */
+--success-color: #34823D;      /* Forest green (unchanged, for consistency) */
+--warning-color: #C57C1D;      /* Warm amber (unchanged, works well with golden-orange) */     /* Amber */
+}
 // Dark Mode
 .dark-mode {
-  --primary-bg: #131516;
-  --secondary-bg: #0f0f0f;
-  --text-primary: #e0e0e0;
-  --text-secondary: #f7f7f7;
-  --accent-color: #bb86fc;
-  --highlight-color: #0f9db6;
-  --button-bg: #2e333e;
-  --button-hover-bg: #333333;
-  --border-color: #323232;
-  --error-color: #cf6679;
+  --primary-bg: #161616;
+  --secondary-bg: #1e1e1e;
+  --text-primary: #eaeaea;
+  --text-secondary: #b8b8b8;
+  --accent-color: #703636;
+  --highlight-color: #d7932c;
+  --button-bg: #2a2a2a;
+  --button-hover-bg: #3a3a3a;
+  --border-color: #5a5a5a;
+  --error-color: #ff4c4c;
+
 }
 
 //Dark Mode Theme Variables
@@ -171,13 +186,34 @@ textarea {
 body ul {
   list-style: none;
 }
+/* CSS */
+// .animate-on-scroll {
+//   opacity: 0;
+//   transform: scale(0.95);
+//   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  
+//   /* Optional - Add delay between elements */
+//   transition-delay: calc(var(--index) * 0.5s);
+// }
+
+// .animate-on-scroll.active {
+//   opacity: 1;
+//   transform: scale(1);
+// }
+// .animate-on-scroll:nth-child(1) { transition-delay: 0.5s; }
+// .animate-on-scroll:nth-child(2) { transition-delay: 0.9s; }
+// .animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+// .animate-on-scroll:nth-child(4) { transition-delay: 0.4s; }
+// .animate-on-scroll:nth-child(5) { transition-delay: 0.5s; }
+// .animate-on-scroll:nth-child(6) { transition-delay: 0.6s; }
+// .animate-on-scroll:nth-child(7) { transition-delay: 0.7s; }
+// .animate-on-scroll:nth-child(8) { transition-delay: 0.8s; }
+/* Add more as needed */
 .container {
   margin: 0 100px;
   padding-top: 80px;
   padding-bottom: 40px;
 }
-
-
 header {
   position: sticky;
   z-index: 100;
@@ -186,8 +222,6 @@ header {
     color: var(--text-primary);
     font-family: $headingfont;
     font-size: 25px;
- 
-  
   }
   nav {
     box-shadow: 0px 1px 1px 1px #dbe3e231;
@@ -325,8 +359,12 @@ header {
 button{
   background-color:var(--primary-bg);
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 11px;
   width: 11px;
+  box-shadow: 1px 1px 7px rgba(146, 145, 145, 0.573);
   &:hover{
     background-color:var(--primary-bg) ;
   }
@@ -343,7 +381,7 @@ button{
       justify-content: space-between;
       padding-top: 80px;
 
-      .person-name p {
+      .person-name h1 {
         font-size: 50px;
         font-family: 'Inter';
         font-weight: 800;
@@ -568,7 +606,7 @@ button{
           justify-content: center;
           align-items: center;
           text-align: center;
-          border: 2px solid var(--highlight-color);
+          border: 0px solid var(--highlight-color);
           width: 250px;
           gap: 20px;
           padding: 20px;
@@ -578,8 +616,8 @@ button{
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle initial box-shadow
         
           &:hover {
-            transform: scale(1.1); // Slightly simpler scale
-            box-shadow: 0 8px 16px rgba(74, 171, 198, 0.2); // More pronounced box-shadow on hover
+            transform: scale(1.04); // Slightly simpler scale
+            box-shadow: 0 8px 16px rgba(61, 58, 27, 0.27); // More pronounced box-shadow on hover
           }
         
           img {
@@ -678,7 +716,8 @@ object-fit:cover;
       opacity: 0;
       height: 100%;
       width: 100%;
-      background-color: #3775a2d5; /* Use rgba for transparency */
+      background: linear-gradient(to top, #a35744e1, #feb47b27);
+      ; /* Use rgba for transparency */
       top: 0;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
@@ -687,10 +726,11 @@ object-fit:cover;
       transition: transform 0.3s ease, opacity 0.3s ease; /* Shorter transition */
       transform: translateY(100%);
       transition: transform 0.8s;
+      
 p{
   font-size: 20px;
   color:var(--text-primary);
-  font-weight: 500;
+  font-weight: 600;
 }
     }
    
@@ -839,7 +879,7 @@ h1{
     .home-right {
       padding-top: 30px;
 
-      .person-name p {
+      .person-name h1 {
         font-size: 40px;
         
       }
@@ -1089,7 +1129,7 @@ button{
       .home-right {
         padding-top: 30px;
   
-        .person-name p {
+        .person-name h1 {
           font-size: 30px;
         }
   
@@ -1122,7 +1162,7 @@ button{
       .home-image-wrapper {
         height: 400px;
         width: 400px;
-        background-color: rgba(42, 215, 230, 0.341);
+        background-color: var(--highlight-color);
         box-shadow: 0 4px 6px rgba(167, 230, 223, 0.292);
       }
       .home-img-name {
@@ -1366,7 +1406,7 @@ button{
         .home-right {
           padding-top: 30px;
     
-          .person-name p {
+          .person-name h1 {
             font-size: 30px;
             font-weight: 400;
           }
@@ -1465,7 +1505,7 @@ button{
               padding: 15px;
               &:hover {
                 transform: scale(1.03); // Slightly simpler scale
-                box-shadow: 0 8px 16px rgba(74, 171, 198, 0.2); // More pronounced box-shadow on hover
+                
               }
               img{
                 height: 34px;
