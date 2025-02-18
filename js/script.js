@@ -220,6 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll(".scroll-content").forEach(element => {
       observer.observe(element);
     });
-    
-
+  
+  
    

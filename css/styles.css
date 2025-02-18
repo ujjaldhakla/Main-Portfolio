@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   /* Base Colors */
   --primary-bg: #edecec; /* Warm white (unchanged, works well with golden-orange) */
-  --secondary-bg: #e0e0e0; /* Soft warm beige (lighter and warmer to complement the highlight) */
+  --secondary-bg: #e0e0e0a9; /* Soft warm beige #e0e0e0 (lighter and warmer to complement the highlight) */
   /* Text */
   --text-primary: #140909; /* Deep chocolate (unchanged, provides good contrast) */
   --text-secondary: #1b150ee4; /* Muted brick (unchanged, works well with warm tones) */
   /* Accents */
-  --accent-color: #D7932C; /* New highlight color: golden-orange */
-  --highlight-color: #d7932c; /* Your new highlight color */
+  --accent-color: #d7932c52; /* New highlight color: golden-orange */
+  --highlight-color: #cf8e2d; /* Your new highlight color */
   /* Buttons */
   --button-bg: #e9d9ca; /* Light warm orange (derived from highlight color) */
   --button-hover-bg: #f7cb9f; /* Darker warm orange (hover state) */
@@ -21,14 +22,14 @@
 }
 
 .dark-mode {
-  --primary-bg: #161616;
-  --secondary-bg: #1e1e1e;
+  --primary-bg: #0a192f;
+  --secondary-bg: rgba(255, 255, 255, 0.05) ;
   --text-primary: #eaeaea;
   --text-secondary: #b8b8b8;
   --accent-color: #703636;
   --highlight-color: #d7932c;
-  --button-bg: #2a2a2a;
-  --button-hover-bg: #3a3a3a;
+  --button-bg: #23232c;
+  --button-hover-bg: #23232c64;
   --border-color: #5a5a5a;
   --error-color: #ff4c4c;
 }
@@ -69,7 +70,7 @@ h1 span {
 
 p {
   color: var(--text-secondary);
-  font-family: "Poppins";
+  font-family: "Montserrat";
 }
 
 a {
@@ -149,7 +150,7 @@ header nav a {
 }
 header nav {
   box-shadow: 0px 1px 1px 1px rgba(219, 227, 226, 0.1921568627);
-  background-color: var(--secondary-bg);
+  background-color: var(--primary-bg);
 }
 header nav .container {
   display: flex;
@@ -288,7 +289,7 @@ header nav .container .burger.activee .line:nth-child(3) {
   color: var(--highlight-color);
   font-size: 45px;
   padding: 10 0px;
-  font-family: "Inter";
+  font-family: "Montserrat";
 }
 .home-container .home .home-right .home-intro {
   width: 70%;
@@ -314,6 +315,7 @@ header nav .container .burger.activee .line:nth-child(3) {
   -o-object-fit: cover;
      object-fit: cover;
   background-color: transparent;
+  border-bottom-right-radius: 20px;
 }
 .home-container .home-img .home-img-name {
   z-index: 5;
@@ -556,13 +558,10 @@ header nav .container .burger.activee .line:nth-child(3) {
 }
 .project-container .project .project-image .project-overlay p {
   font-size: 25px;
-  color: var(--text-secondary);
-}
-.project-container .project .project-image .project-overlay p a {
   color: var(--text-primary);
-}
-.project-container .project .project-image .project-overlay p a:hover {
-  color: var(--text-secondary);
+  box-shadow: 0px 0px 2px 2px rgba(182, 178, 178, 0.58);
+  padding: 3px 2px;
+  border-radius: 4px;
 }
 .project-container .project .project-content {
   padding-top: 30px;
@@ -780,7 +779,6 @@ footer {
 @media (max-width: 768px) {
   header nav {
     box-shadow: none;
-    background-color: var(--secondary-bg);
   }
   header nav .container {
     display: flex;
@@ -793,7 +791,7 @@ footer {
     right: -100%;
     width: 70lvw;
     height: 100vh;
-    background: var(--secondary-bg);
+    background: var(--primary-bg);
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -977,10 +975,6 @@ footer {
 @media (max-width: 480px) {
   header {
     height: 50px;
-  }
-  header nav {
-    box-shadow: none;
-    background-color: var(--secondary-bg);
   }
   header nav .container {
     display: flex;
